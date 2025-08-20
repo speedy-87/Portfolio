@@ -41,14 +41,14 @@ header h1 {
 nav ul {
   list-style: none;
   display: flex;
-  flex-direction: column; /* stack vertically */
-  align-items: center;    /* center the items */
+  flex-direction: column; /* force vertical layout */
+  align-items: center;    /* center horizontally */
   margin-top: 20px;
   padding: 0;
 }
 
 nav ul li {
-  margin: 10px 0; /* spacing between each nav item */
+  margin: 10px 0; /* space between nav items */
 }
 
 nav ul li a {
@@ -62,7 +62,6 @@ nav ul li a {
 nav ul li a:hover {
   color: #00bfae;
 }
-
 
 /* Sections */
 section {
