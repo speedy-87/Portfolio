@@ -40,12 +40,12 @@ header h1 {
 nav ul {
   list-style: none;
   display: flex;
-  flex-direction: row;   /* force horizontal */
+  flex-direction: row;   /* always horizontal */
   justify-content: center;
   align-items: center;
   margin-top: 20px;
   padding: 0;
-  flex-wrap: nowrap;    /* never wrap */
+  flex-wrap: nowrap;    /* prevent wrapping */
 }
 
 nav ul li {
@@ -64,16 +64,31 @@ nav ul li a:hover {
   color: #00bfae;
 }
 
-/* Responsive font scaling */
-@media (max-width: 768px) {
+/* Responsive scaling without stacking */
+@media (max-width: 1024px) {
+  nav ul li {
+    margin: 0 12px;
+  }
   nav ul li a {
-    font-size: 1rem;  /* shrink on tablets */
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul li {
+    margin: 0 10px;
+  }
+  nav ul li a {
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 480px) {
+  nav ul li {
+    margin: 0 8px;
+  }
   nav ul li a {
-    font-size: 0.9rem;  /* shrink more on phones */
+    font-size: 0.9rem;
   }
 }
 
@@ -241,15 +256,6 @@ footer p {
 @media (max-width: 768px) {
   header h1 {
     font-size: 2rem;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav ul li {
-    margin: 10px 0;
   }
 
   section h2 {
