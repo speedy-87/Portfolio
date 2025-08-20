@@ -16,6 +16,7 @@ body {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 15px; /* protect against edges on phones */
 }
 
 /* Header */
@@ -69,20 +70,25 @@ section h2 {
   text-align: center;
   font-size: 2.5rem;
   color: #fff;
+  margin-bottom: 20px;
 }
 
 /* Text blocks */
 p {
   width: 100%;
-  max-width: 600px;
+  max-width: 700px;
   margin: auto;
+  padding: 0 10px;
+  text-align: center;
 }
 
 #aboutME,
 #contactME {
   width: 100%;
-  max-width: 500px;
+  max-width: 600px;
   margin: auto;
+  padding: 0 15px;
+  text-align: center;
 }
 
 /* Project cards */
@@ -90,7 +96,7 @@ p {
   padding: 30px;
   margin: 20px auto;
   width: 100%;
-  max-width: 500px;
+  max-width: 600px;
   border-radius: 15px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
   background-color: rgba(44, 62, 80, 0.4);
@@ -107,12 +113,14 @@ p {
   font-size: 1.8rem;
   margin-bottom: 15px;
   color: #00bfae;
+  text-align: center;
 }
 
 .project p {
   font-size: 1.2rem;
   color: #ccc;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .project a {
@@ -193,6 +201,24 @@ footer p {
 }
 
 /* --- RESPONSIVE BREAKPOINTS --- */
+@media (max-width: 1024px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  section h2 {
+    font-size: 2rem;
+  }
+
+  .project {
+    max-width: 90%;
+  }
+
+  #aboutME, #contactME {
+    max-width: 90%;
+  }
+}
+
 @media (max-width: 768px) {
   header h1 {
     font-size: 2rem;
@@ -208,11 +234,11 @@ footer p {
   }
 
   section h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .project h3 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
   .project p {
@@ -234,7 +260,13 @@ footer p {
   }
 
   section h2 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+  }
+
+  #aboutME, #contactME {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    padding: 0 10px;
   }
 
   .project {
@@ -242,17 +274,17 @@ footer p {
   }
 
   .project h3 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 
   .project p {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 
   .btn,
   .project a,
   #contact a {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     padding: 8px 16px;
   }
 }
