@@ -36,19 +36,20 @@ header h1 {
   font-weight: 700;
 }
 
-
 /* Nav */
 nav ul {
   list-style: none;
   display: flex;
-  flex-direction: column; /* force vertical layout */
-  align-items: center;    /* center horizontally */
+  flex-direction: row;   /* force horizontal */
+  justify-content: center;
+  align-items: center;
   margin-top: 20px;
   padding: 0;
+  flex-wrap: nowrap;    /* never wrap */
 }
 
 nav ul li {
-  margin: 10px 0; /* space between nav items */
+  margin: 0 15px; /* spacing between links */
 }
 
 nav ul li a {
@@ -61,6 +62,19 @@ nav ul li a {
 
 nav ul li a:hover {
   color: #00bfae;
+}
+
+/* Responsive font scaling */
+@media (max-width: 768px) {
+  nav ul li a {
+    font-size: 1rem;  /* shrink on tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul li a {
+    font-size: 0.9rem;  /* shrink more on phones */
+  }
 }
 
 /* Sections */
