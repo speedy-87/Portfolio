@@ -73,10 +73,15 @@ section h2 {
   color: #fff;
 }
 
+p {
+    width: fit-content;
+    margin: auto;
+}
+
 .project {
   padding: 30px;
-  margin: auto;
-  width: 600px;
+  margin: 20px auto;
+  width: fit-content;
   border-radius: 15px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
