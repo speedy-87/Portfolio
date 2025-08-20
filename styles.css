@@ -1,3 +1,4 @@
+/* Reset + Base */
 * {
   margin: 0;
   padding: 0;
@@ -17,20 +18,14 @@ body {
   margin: 0 auto;
 }
 
+/* Header */
 header {
   color: #e0e0e0;
   padding: 30px 0;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
-}
-
-header, footer, .project {
-  background-color: rgba(44, 62, 80, 0.4); /* Transparent background */
-  backdrop-filter: blur(10px); /* Background blur */
+  background-color: rgba(44, 62, 80, 0.4);
+  backdrop-filter: blur(10px);
   position: relative;
-}
-
-header h1, nav ul li a, .project h3, .project p {
-  z-index: 1; /* Ensure text stays above the blurred background */
 }
 
 header h1 {
@@ -40,11 +35,13 @@ header h1 {
   font-weight: 700;
 }
 
+/* Nav */
 nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
   margin-top: 20px;
+  flex-wrap: wrap;
 }
 
 nav ul li {
@@ -60,9 +57,10 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #00bfae; /* Vibrant Teal */
+  color: #00bfae;
 }
 
+/* Sections */
 section {
   padding: 20px;
 }
@@ -73,26 +71,30 @@ section h2 {
   color: #fff;
 }
 
+/* Text blocks */
 p {
-    width: auto;
-    margin: auto;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
 }
 
-#aboutME {
-    width: 500px;
-    margin: auto;
-}
-
+#aboutME,
 #contactME {
-    width: 300px;
-    margin: auto;
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
 }
+
+/* Project cards */
 .project {
   padding: 30px;
   margin: 20px auto;
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   border-radius: 15px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+  background-color: rgba(44, 62, 80, 0.4);
+  backdrop-filter: blur(10px);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -104,7 +106,7 @@ p {
 .project h3 {
   font-size: 1.8rem;
   margin-bottom: 15px;
-  color: #00bfae; /* Vibrant Teal */
+  color: #00bfae;
 }
 
 .project p {
@@ -115,34 +117,38 @@ p {
 
 .project a {
   font-weight: bold;
-  background-color: #00bfae; /* Vibrant Teal */
+  background-color: #00bfae;
   color: white;
   text-decoration: none;
   padding: 12px 30px;
   border-radius: 5px;
   transition: background-color 0.3s, transform 0.3s;
+  display: inline-block;
 }
 
 .project a:hover {
-  background-color: #008f8a; /* Darker Teal */
+  background-color: #008f8a;
   transform: scale(1.05);
 }
 
+/* Footer */
 footer {
   color: white;
   text-align: center;
   padding: 35px;
+  background-color: rgba(44, 62, 80, 0.4);
+  backdrop-filter: blur(10px);
 }
 
 footer p {
   font-size: 1.2rem;
 }
 
-/* Button Styles */
+/* Buttons */
 .btn {
   display: inline-block;
   padding: 14px 30px;
-  background-color: #00bfae; /* Vibrant Teal */
+  background-color: #00bfae;
   color: white;
   font-weight: bold;
   border-radius: 5px;
@@ -152,11 +158,11 @@ footer p {
 }
 
 .btn:hover {
-  background-color: #008f8a; /* Darker Teal */
+  background-color: #008f8a;
   transform: scale(1.05);
 }
 
-/* Contact Section Styling */
+/* Contact section */
 #contact ul {
   padding-left: 0;
   list-style: none;
@@ -173,44 +179,20 @@ footer p {
 #contact a {
   display: block;
   font-weight: bold;
-  background-color: #00bfae; /* Vibrant Teal */
+  background-color: #00bfae;
   color: white;
   text-decoration: none;
   padding: 12px 30px;
   border-radius: 5px;
   transition: background-color 0.3s, transform 0.3s;
-  text-align: center;
 }
 
 #contact a:hover {
-  background-color: #008f8a; /* Darker Teal */
+  background-color: #008f8a;
   transform: scale(1.05);
 }
 
-
-/* --- RESPONSIVE STYLES --- */
-@media (max-width: 1024px) {
-  header h1 {
-    font-size: 2.5rem;
-  }
-
-  nav ul li a {
-    font-size: 1.1rem;
-  }
-
-  section h2 {
-    font-size: 2rem;
-  }
-
-  .project {
-    width: 80%;
-  }
-
-  #aboutME, #contactME {
-    width: 80%;
-  }
-}
-
+/* --- RESPONSIVE BREAKPOINTS --- */
 @media (max-width: 768px) {
   header h1 {
     font-size: 2rem;
@@ -222,23 +204,24 @@ footer p {
   }
 
   nav ul li {
-    margin: 8px 0;
+    margin: 10px 0;
   }
 
-  .project {
-    width: 90%;
-    padding: 20px;
+  section h2 {
+    font-size: 2rem;
   }
 
-  #aboutME, #contactME {
-    width: 90%;
+  .project h3 {
+    font-size: 1.5rem;
   }
 
-  footer p {
+  .project p {
     font-size: 1rem;
   }
 
-  .btn, .project a, #contact a {
+  .btn,
+  .project a,
+  #contact a {
     font-size: 1rem;
     padding: 10px 20px;
   }
@@ -247,23 +230,29 @@ footer p {
 @media (max-width: 480px) {
   header h1 {
     font-size: 1.6rem;
+    padding: 0 10px;
   }
 
   section h2 {
-    font-size: 1.5rem;
-  }
-
-  .project h3 {
     font-size: 1.4rem;
   }
 
-  .project p {
-    font-size: 1rem;
+  .project {
+    padding: 20px;
   }
 
-  .btn, .project a, #contact a {
+  .project h3 {
+    font-size: 1.3rem;
+  }
+
+  .project p {
+    font-size: 0.95rem;
+  }
+
+  .btn,
+  .project a,
+  #contact a {
     font-size: 0.9rem;
     padding: 8px 16px;
   }
 }
-
